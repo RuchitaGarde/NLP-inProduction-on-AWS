@@ -10,6 +10,7 @@ Predict star rating of labeled Amazon reviews belonging to 3 categories (reducin
 - EC2
 - Athena: To be able to query S3 data
 - IAM: For setting up roles & AWS Services access
+- ECR Elastic Container Registry: To store docker image of model to serve REST endpoint
 - CloudWatch
 
 ### Libraries & Packages used
@@ -39,6 +40,16 @@ Predict star rating of labeled Amazon reviews belonging to 3 categories (reducin
 - 05_train
   - Train reviews BERT Transformers Tensorflow Adhoc: Exploring training in notebook on small dataset before converting into script format (for learning purposes).
   - Train reviews BERT Transformers Tensorflow Script: We will run the model in cluster mode. Multiple experiments are created & tracked.
+  - Convert BERT Transformers Tensorflow to PyTorch: This is done only for learning purposes. However, during deployment, PyTorch model is used.
+  - Analyze Training results with SageMaker debugger: Visualize loss & accuracy using smdebug sagemaker library
+  - Predict Reviews BERT transformers Tensorflow Adhoc: Retrieve the model saved as tar file from within S3 bucket to make predictions in notebook.
+- 06_optimize
+  - Hyperparameter tuning reviews: Hyperparameters include freeze_bert_layer (knowledge transfer vs fine tuning), epochs, batch size, learning rate (for gradient descent) etc.
+- 07_deploy
+  - Deploy reviews BERT PyTorch REST endpoint: We could have deployed any one of PyTorch or Tensorflow models. Build a TorchServe Docker image using model file from S3, push image to ECR
+- 08_pipeline
+  - Create Pipeline Train & Deploy Reviews BERT Tensorflow: Step functions are used to create pipeline of executable tasks
+  - Predict Pipeline Reviews BERT Tensorflow REST Enfpoint: Test the model deployed from our pipeline
 
 
 ### Data Source
