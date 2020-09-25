@@ -15,9 +15,9 @@ Predict star rating of labeled Amazon reviews belonging to 3 categories (reducin
 ### Libraries & Packages used
 - Python 3.6
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html#:~:text=Boto%20is%20the%20Amazon%20Web,level%20access%20to%20AWS%20services.): The AWS SDK for Python
-- HuggingFace library Transformers: for BERT
+- HuggingFace library [Transformers](https://huggingface.co/transformers/): for BERT
 - Tensorflow, PyTorch, Scikit learn
-- PySpark, Deequ: To be able to run Spark on SageMaker
+- PySpark, [Deequ](https://github.com/awslabs/deequ): Deequ is Spark library specific for performing data quality checks on AWS
 - Pandas, Numpy, Seaborn
 
 ### Navigating this repository
@@ -31,6 +31,11 @@ Predict star rating of labeled Amazon reviews belonging to 3 categories (reducin
   - Query Data with AWS Wrangler: This is just for learning purposes - exploration of an AWS service
 - 03_explore
   - Visualize reviews dataset: Perform exploratory data analysis. Use PyAthena to query data in SQL & get results in dataframe, use Seaborn library to visualize results.
-  - Analyze Data quality processing job Spark: Spark is used to process & analyze dataset while preparing it before modeling. Constraints checks on fields are performed.
+  - Analyze Data quality processing job Spark: Spark library deequ is used to process & analyze dataset while preparing it before modeling. Constraints checks on fields are performed.
 - 04_prepare
-  - Prepare Dataset BERT scikit Adhoc: Performing BERT-specific tokenization & feature transformation in notebook on small dataset before converting it into script format.
+  - Prepare Dataset BERT Adhoc: Performing BERT-specific tokenization & feature transformation in notebook on small dataset before converting it into script format.
+  - 
+
+
+### Data Source
+[AWS public S3 bucket](https://s3.amazonaws.com/amazon-reviews-pds/readme.html)
