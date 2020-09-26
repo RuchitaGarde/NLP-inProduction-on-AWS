@@ -1,4 +1,4 @@
-# Natural Language Processing using BERT, PyTorch, Tensorflow, Spark on AWS
+# Natural Language Processing using BERT, PyTorch, Tensorflow, Spark, Docker on AWS
 ## Predict star rating of labeled Amazon reviews
 
 Predict star rating of labeled Amazon reviews belonging to 3 categories (reducing size of dataset to decrease computation time) using supervised learning. The predictors used will be word embeddings derived based on BERT model. Both, transfer learning vs fine tuning options of BERT are explored. Spark is used for feature transformation & model training on multiple EC2 nodes. REST end point is created for predictions.
